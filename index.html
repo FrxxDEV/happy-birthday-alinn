@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy 18th Birthday My Favorite Person 💖</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Dancing+Script:wght@600;700&family=Great+Vibes&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Background Canvas for Floating Hearts -->
+    <canvas id="hearts-canvas"></canvas>
+
+    <!-- Background Audio -->
+    <audio id="bg-music" src="assets/music/birthday-song.mp3" preload="auto" loop></audio>
+
+    <!-- ==================== OPENING SECTION ==================== -->
+    <section id="opening-screen" class="opening-screen">
+        <div class="stars-overlay"></div>
+        
+        <div class="envelope-container" id="envelope-container">
+            <div class="envelope" id="envelope">
+                <!-- Flap (Top triangular lid) -->
+                <div class="envelope-flap" id="envelope-flap"></div>
+                
+                <!-- Inner Paper preview sliding up -->
+                <div class="envelope-paper" id="envelope-paper">
+                    <div class="paper-preview-content">
+                        <span class="preview-heart">🤍</span>
+                        <p class="preview-title">Special Letter</p>
+                        <p class="preview-subtitle">For My Favorite Person</p>
+                    </div>
+                </div>
+                
+                <!-- Pocket (Bottom and sides) -->
+                <div class="envelope-pocket"></div>
+                
+                <!-- Front Pocket Overlay -->
+                <div class="envelope-front"></div>
+
+                <!-- Wax Seal Stamp -->
+                <div class="wax-seal" id="wax-seal">
+                    <div class="seal-inner">
+                        <span class="seal-icon">💖</span>
+                        <span class="seal-number">18</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Opening Text Prompt -->
+            <div class="opening-prompt-box">
+                <p class="opening-prompt" id="prompt-text">buka surat ini yaaa</p>
+                <div class="click-hint">
+                    <span class="tap-icon">✨</span>
+                    <span class="tap-text">Klik amplop untuk membuka</span>
+                    <span class="tap-icon">✨</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== MAIN CONTENT CONTAINER ==================== -->
+    <main id="main-content" class="main-content hidden">
+        
+        <!-- Sticky Navigation Header -->
+        <header class="navbar">
+            <div class="nav-brand">
+                <span class="brand-heart">🤍</span>
+                <span class="brand-text">Happy 18th Birthday</span>
+            </div>
+            <nav class="nav-links">
+                <a href="#birthday-section" class="nav-link active">Surat Ulang Tahun</a>
+                <a href="#wish-section" class="nav-link">Tiup Lilin 🎂</a>
+                <a href="#our-story" class="nav-link">Our Story 📸</a>
+            </nav>
+        </header>
+
+        <!-- Floating Music Controller Widget -->
+        <div class="music-widget" id="music-widget">
+            <button class="music-btn" id="music-btn" aria-label="Toggle Audio">
+                <span class="music-icon" id="music-icon">🎵</span>
+                <div class="equalizer-bars" id="equalizer">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </button>
+            <div class="music-info" id="music-info">
+                <span class="music-title">Birthday Song 🎶</span>
+                <span class="music-status" id="music-status">Diputar</span>
+            </div>
+        </div>
+
+        <!-- HERO / BIRTHDAY SECTION -->
+        <section id="birthday-section" class="section birthday-section">
+            <div class="container">
+                
+                <div class="birthday-header">
+                    <div class="badge-pill">
+                        <span class="badge-icon">🎉</span>
+                        <span>Special 18th Milestone</span>
+                    </div>
+                    
+                    <h1 class="birthday-title">Happy Birthday My Favorite Person</h1>
+                    
+                    <div class="subtitle-decorative">
+                        <span class="line"></span>
+                        <span class="sparkle">✨ 18 Years Of Sweet Magic ✨</span>
+                        <span class="line"></span>
+                    </div>
+                </div>
+
+                <!-- LETTER CARD CONTAINER -->
+                <div class="letter-card-wrapper">
+                    <div class="letter-card-paper">
+                        <div class="paper-header-seal">
+                            <div class="paper-stamp">
+                                <span>18th</span>
+                                <small>SPECIAL</small>
+                            </div>
+                            <div class="paper-date" id="current-date">11 Agustus 2026</div>
+                        </div>
+
+                        <!-- Full Letter Text Body -->
+                        <div class="letter-body">
+                            <p class="letter-paragraph highlight-opening">
+                                Haii, orang yang aku sayangi, yang aku cintai, dan yang selalu aku kagumi.
+                            </p>
+
+                            <p class="letter-paragraph">
+                                Di hari yang spesial ini, aku mau ngucapin selamat ulang tahun buat kamu. Selamat ulang tahun yaaa, sekarang kamu udah 18 tahun. Udah besar, bukan anak kecil lagi xixixixi.
+                            </p>
+
+                            <p class="letter-paragraph">
+                                Aku seneng banget rasanya bisa kenal kamu. Jujur, aku nggak pernah nyangka kalau awalnya kita cuma saling kenal, sampai akhirnya bisa sedekat dan sesayang ini. Aku juga bersyukur banget karena dari sekian banyak orang yang bisa aku temui di dunia ini, ternyata aku dipertemukan sama kamu.
+                            </p>
+
+                            <p class="letter-paragraph">
+                                Di umur kamu yang ke-18 ini, aku doain semoga semua hal baik selalu datang ke kamu. Semoga apa pun yang kamu inginkan bisa tercapai, apa pun yang selama ini kamu impikan bisa perlahan menjadi kenyataan, dan semoga langkah kamu ke depannya selalu dimudahkan.
+                            </p>
+
+                            <p class="letter-paragraph">
+                                Aku juga selalu doain supaya kamu sehat terus, panjang umur, selalu dikelilingi orang-orang yang sayang sama kamu, dan punya banyak alasan untuk tersenyum setiap harinya.
+                            </p>
+
+                            <p class="letter-paragraph">
+                                Aku nggak tahu kenapa, tapi rasanya setiap kali kamu bahagia, aku juga ikut bahagia. Lihat kamu senang aja rasanya udah cukup bikin aku ikut senyum. Mungkin sesederhana itu cara aku menyayangi kamu.
+                            </p>
+
+                            <p class="letter-paragraph">
+                                Aku selalu berdoa semoga kita bisa terus berjalan bersama, saling menemani, saling mengerti, dan kalau memang Tuhan mengizinkan, semoga suatu hari nanti kita bisa dipertemukan di pintu yang sama dan menjalani kehidupan bersama.
+                            </p>
+
+                            <p class="letter-paragraph">
+                                Terima kasih karena sudah hadir di hidup aku, terima kasih untuk semua cerita, tawa, dan hal-hal kecil yang mungkin nggak kamu sadari tapi berarti buat aku.
+                            </p>
+
+                            <p class="letter-paragraph highlight-love">
+                                Sekali lagi, selamat ulang tahun yaaa, sayang. 🤍
+                            </p>
+
+                            <p class="letter-paragraph">
+                                Semoga umur 18 ini menjadi awal dari banyak hal indah dalam hidup kamu. Semoga kamu tumbuh menjadi seseorang yang semakin kuat, semakin bahagia, dan semakin dekat dengan semua hal yang kamu impikan.
+                            </p>
+
+                            <p class="letter-paragraph closing-signature">
+                                Aku sayang kamu. 🤍
+                            </p>
+                        </div>
+
+                        <!-- Interactive Heart Reaction -->
+                        <div class="letter-footer">
+                            <button class="love-reaction-btn" id="love-btn">
+                                <span class="btn-heart-icon">💖</span>
+                                <span class="btn-text">Kirim Cinta Buat Kamu</span>
+                                <span class="love-counter" id="love-counter">0</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- MAKE A WISH / BLOW CANDLE INTERACTIVE SECTION -->
+        <section id="wish-section" class="section wish-section">
+            <div class="container">
+                <div class="section-title-box">
+                    <span class="sub-heading">Make A Wish</span>
+                    <h2 class="section-heading">Tiup Lilin Ulang Tahunmu 🎂</h2>
+                    <p class="section-desc">Pikirkan satu harapan terindahmu di umur 18 tahun ini, lalu klik lilinnya untuk meniup!</p>
+                </div>
+
+                <div class="cake-card">
+                    <div class="cake-wrapper" id="cake-wrapper">
+                        <!-- Animated Cake -->
+                        <div class="cake">
+                            <div class="candle" id="candle">
+                                <div class="flame" id="flame"></div>
+                                <div class="smoke hidden" id="smoke"></div>
+                            </div>
+                            <div class="top-layer"></div>
+                            <div class="middle-layer"></div>
+                            <div class="bottom-layer"></div>
+                            <div class="icing"></div>
+                        </div>
+                    </div>
+
+                    <div class="wish-action-box">
+                        <button class="blow-btn" id="blow-btn">
+                            <span class="btn-icon">🕯️</span>
+                            <span id="blow-btn-text">Klik Untuk Meniup Lilin!</span>
+                        </button>
+                        <p class="wish-result hidden" id="wish-result">
+                            ✨ Semoga semua impian dan harapanmu di usia 18 tahun ini terwujud! Aku selalu mendukungmu. 💖
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- OUR STORY PHOTO GALLERY SECTION -->
+        <section id="our-story" class="section story-section">
+            <div class="container">
+                <div class="section-title-box">
+                    <span class="sub-heading">Sweet Memories</span>
+                    <h2 class="section-heading">Our Story 📸</h2>
+                    <p class="section-desc">Setiap detik bersamamu adalah cerita favorit yang selalu ingin aku simpan selamanya.</p>
+                </div>
+
+                <!-- Easy Instructions for User Photo Replacement -->
+                <!-- 
+                    ===========================================================
+                    PETUNJUK MENGGANTI FOTO:
+                    1. Masukkan file foto kamu ke dalam folder: assets/images/
+                    2. Ganti atribut src pada tag <img> di bawah ini.
+                       Contoh: src="assets/images/foto1.jpg"
+                    ===========================================================
+                -->
+
+                <div class="gallery-grid">
+                    
+                    <!-- Photo Card 1 -->
+                    <div class="polaroid-card" data-title="Momen Pertama Kenal" data-desc="Awal dari cerita indah kita. Nggak nyangka dari cuma saling kenal bisa sejauh ini.">
+                        <div class="tape-sticker"></div>
+                        <div class="photo-frame">
+                            <!-- Placeholder SVG Graphic with easy replacement instructions -->
+                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='600' viewBox='0 0 600 600'><rect width='100%' height='100%' fill='%23fce4ec'/><circle cx='300' cy='250' r='100' fill='%23f8bbd0'/><path d='M250,230 Q300,180 350,230 Q350,280 300,330 Q250,280 250,230 Z' fill='%23800020'/><text x='50%' y='450' font-family='sans-serif' font-size='22' fill='%23800020' text-anchor='middle' font-weight='bold'>Awal Cerita Indah Kita</text><text x='50%' y='490' font-family='sans-serif' font-size='16' fill='%236b1d2f' text-anchor='middle'>Ganti dengan foto1.jpg</text></svg>" alt="Momen Pertama Kenal" class="gallery-img">
+                            <div class="photo-overlay">
+                                <span class="zoom-icon">🔍 Lihat Foto</span>
+                            </div>
+                        </div>
+                        <div class="polaroid-caption">
+                            <span class="caption-tag">Memory #1</span>
+                            <h3 class="caption-title">Momen Pertama Kenal</h3>
+                            <p class="caption-date">Awal Pertemuan Indah</p>
+                        </div>
+                    </div>
+
+                    <!-- Photo Card 2 -->
+                    <div class="polaroid-card" data-title="Tawa & Senyuman Kamu" data-desc="Senyuman kamu selalu punya cara untuk mencerahkan hari-hariku.">
+                        <div class="tape-sticker"></div>
+                        <div class="photo-frame">
+                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='600' viewBox='0 0 600 600'><rect width='100%' height='100%' fill='%23fff0f5'/><circle cx='300' cy='260' r='120' fill='%23ffcad4'/><path d='M230,230 Q300,160 370,230 Q370,300 300,360 Q230,300 230,230 Z' fill='%23800020'/><text x='50%' y='460' font-family='sans-serif' font-size='22' fill='%23800020' text-anchor='middle' font-weight='bold'>Senyuman Favoritku</text><text x='50%' y='500' font-family='sans-serif' font-size='16' fill='%236b1d2f' text-anchor='middle'>Ganti dengan foto2.jpg</text></svg>" alt="Tawa & Senyuman Kamu" class="gallery-img">
+                            <div class="photo-overlay">
+                                <span class="zoom-icon">🔍 Lihat Foto</span>
+                            </div>
+                        </div>
+                        <div class="polaroid-caption">
+                            <span class="caption-tag">Memory #2</span>
+                            <h3 class="caption-title">Tawa & Senyuman Kamu</h3>
+                            <p class="caption-date">Alasan Bahagiaku</p>
+                        </div>
+                    </div>
+
+                    <!-- Photo Card 3 -->
+                    <div class="polaroid-card" data-title="Jalan-Jalan & Cerita Bersama" data-desc="Setiap percakapan dan langkah bersama selalu jadi momen berharga.">
+                        <div class="tape-sticker"></div>
+                        <div class="photo-frame">
+                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='600' viewBox='0 0 600 600'><rect width='100%' height='100%' fill='%23fde2e4'/><rect x='150' y='180' width='300' height='200' rx='20' fill='%23f8bbd0'/><path d='M260,250 Q300,200 340,250 Q340,290 300,330 Q260,290 260,250 Z' fill='%23800020'/><text x='50%' y='460' font-family='sans-serif' font-size='22' fill='%23800020' text-anchor='middle' font-weight='bold'>Momen Kebersamaan</text><text x='50%' y='500' font-family='sans-serif' font-size='16' fill='%236b1d2f' text-anchor='middle'>Ganti dengan foto3.jpg</text></svg>" alt="Cerita Bersama" class="gallery-img">
+                            <div class="photo-overlay">
+                                <span class="zoom-icon">🔍 Lihat Foto</span>
+                            </div>
+                        </div>
+                        <div class="polaroid-caption">
+                            <span class="caption-tag">Memory #3</span>
+                            <h3 class="caption-title">Cerita & Tawa Bersama</h3>
+                            <p class="caption-date">Hal-hal Kecil Berarti</p>
+                        </div>
+                    </div>
+
+                    <!-- Photo Card 4 -->
+                    <div class="polaroid-card" data-title="Menuju Masa Depan" data-desc="Semoga kita bisa terus berjalan bersama dan dipertemukan di pintu yang sama.">
+                        <div class="tape-sticker"></div>
+                        <div class="photo-frame">
+                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='600' viewBox='0 0 600 600'><rect width='100%' height='100%' fill='%23fce4ec'/><polygon points='300,120 340,220 440,220 360,280 390,380 300,320 210,380 240,280 160,220 260,220' fill='%23e8a598'/><text x='50%' y='460' font-family='sans-serif' font-size='22' fill='%23800020' text-anchor='middle' font-weight='bold'>Harapan Bersama</text><text x='50%' y='500' font-family='sans-serif' font-size='16' fill='%236b1d2f' text-anchor='middle'>Ganti dengan foto4.jpg</text></svg>" alt="Menuju Masa Depan" class="gallery-img">
+                            <div class="photo-overlay">
+                                <span class="zoom-icon">🔍 Lihat Foto</span>
+                            </div>
+                        </div>
+                        <div class="polaroid-caption">
+                            <span class="caption-tag">Memory #4</span>
+                            <h3 class="caption-title">Menuju Masa Depan</h3>
+                            <p class="caption-date">Selalu Bersama</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="container">
+                <p class="footer-heart">🤍 🤍 🤍</p>
+                <p class="footer-text">Dibuat khusus dengan seluruh rasa sayang untuk ulang tahunmu yang ke-18.</p>
+                <p class="footer-copy">Forever & Always | Happy Birthday My Favorite Person ✨</p>
+            </div>
+        </footer>
+
+    </main>
+
+    <!-- LIGHTBOX MODAL FOR GALLERY -->
+    <div class="modal hidden" id="photo-modal">
+        <div class="modal-backdrop" id="modal-backdrop"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close" aria-label="Tutup Modal">&times;</button>
+            <div class="modal-body">
+                <img src="" alt="" class="modal-img" id="modal-img">
+                <div class="modal-caption">
+                    <h3 class="modal-title" id="modal-title"></h3>
+                    <p class="modal-desc" id="modal-desc"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Script -->
+    <script src="js/script.js"></script>
+</body>
+</html>

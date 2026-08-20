@@ -1,21 +1,21 @@
-# 💌 Happy Birthday — Alinn
+# Happy Birthday — Alinn
 
-A small interactive birthday website made with love. 🤍
+A small interactive birthday website made with love.
 
 Website ini dibuat sebagai **digital love letter**, di mana seseorang diajak melewati beberapa bagian sebelum sampai ke pesan ulang tahun dan kumpulan memories.
 
-## ✨ Features
+## Features
 
-* 💌 Interactive opening envelope
-* 💗 Floating heart animation
-* 🎂 Birthday greeting
-* 💬 Personal birthday message
-* 📸 Our Story / photo gallery
-* 🎵 Background birthday music
-* ✨ Smooth animations & transitions
-* 📱 Responsive design untuk desktop dan mobile
+* Interactive opening envelope
+* Floating heart animation
+* Birthday greeting
+* Personal birthday message
+* Our Story / photo gallery
+* Background music — **Semua Aku Dirayakan**
+* Smooth animations & transitions
+* Responsive design untuk desktop dan mobile
 
-## 🎨 Design
+## Design
 
 Tema utama website menggunakan kombinasi:
 
@@ -25,7 +25,7 @@ Tema utama website menggunakan kombinasi:
 
 Style yang digunakan adalah **romantic, soft, elegant, dan minimal**.
 
-## 🛠️ Built With
+## Built With
 
 * HTML5
 * CSS3
@@ -33,7 +33,7 @@ Style yang digunakan adalah **romantic, soft, elegant, dan minimal**.
 
 Tidak menggunakan framework atau library frontend.
 
-## 📁 Project Structure
+## Project Structure
 
 ```text
 happy-birthday-alinn/
@@ -54,10 +54,10 @@ happy-birthday-alinn/
     │       └── ...
     │
     └── music/
-        └── birthday-song.mp3
+        └── semua-aku-dirayakan.mp3
 ```
 
-## 🚀 Running Locally
+## Running Locally
 
 Tidak membutuhkan instalasi khusus.
 
@@ -71,13 +71,13 @@ di browser.
 
 Atau gunakan **Live Server** melalui VS Code untuk pengalaman development yang lebih nyaman.
 
-## 🌐 Deployment
+## Deployment
 
-Website ini dapat di-deploy menggunakan **Vercel** dan terhubung langsung dengan repository GitHub.
+Website ini dapat di-deploy menggunakan Vercel dan terhubung langsung dengan repository GitHub.
 
 Setiap perubahan yang di-push ke branch `main` akan otomatis dibuatkan deployment baru oleh Vercel.
 
-## 📸 Adding Photos
+## Adding Photos
 
 Masukkan foto ke:
 
@@ -91,21 +91,19 @@ Kemudian tambahkan path foto tersebut ke HTML:
 <img src="assets/images/story/photo-01.jpg" alt="Our Story">
 ```
 
-## 🎵 Adding Music
+## Music
 
-Masukkan file musik ke:
+Background music yang digunakan dalam website:
+
+**Semua Aku Dirayakan**
+
+File musik disimpan di:
 
 ```text
-assets/music/
+assets/music/semua-aku-dirayakan.mp3
 ```
 
-Kemudian gunakan file tersebut sebagai source audio:
-
-```html
-<audio src="assets/music/semua aku dirayakan.mp3"></audio>
-```
-
-## 🤍 Purpose
+## Purpose
 
 Website ini dibuat sebagai hadiah kecil untuk seseorang yang spesial.
 
@@ -113,5 +111,4 @@ Website ini dibuat sebagai hadiah kecil untuk seseorang yang spesial.
 
 ---
 
-Made with 🤍 and a little bit of code.
-
+Made with love and a little bit of code.

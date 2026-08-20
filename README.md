@@ -102,7 +102,7 @@ assets/music/
 Kemudian gunakan file tersebut sebagai source audio:
 
 ```html
-<audio src="assets/music/birthday-song.mp3"></audio>
+<audio src="assets/music/semua aku dirayakan.mp3"></audio>
 ```
 
 ## 🤍 Purpose
